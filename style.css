@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(assets/indexfundo.jpg);
+    background-size: cover;
+    backdrop-filter: blur(1px) brightness(40%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: clamp(30px, 18vw, 140px);
+
+    h1{
+        font-family: 'Satisfy', Heveltica;
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 700;
+        color: rgb(255, 255, 255);
+        margin-bottom: 1.5rem;
+    }
+    .word1, .word2{
+        font-family: 'Inter', sans-serif;
+        font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+        font-weight: 600;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .word2{
+        font-size: clamp(1rem, 2.5vw,1.3rem);
+        font-weight: 500;
+    }
+    .word1:hover{
+        color: rgb(207, 207, 207);
+        font-weight: 700;
+    }
+    .word2:hover{
+        color: rgb(207, 207, 207);
+        font-weight: 600;
+    }
+}
+
+#footerimg{
+    background-image: url(assets/footerimg.png);
+    background-size: cover;
+    position: fixed;
+    bottom: 20px;
+    z-index: 1;
+    width: clamp(277px, 50vw, 554px);
+    height: clamp(72.6px, 13vw, 145.2px);
+}
+#footerimg:hover{
+    transform: scale(1.2);
+    transition: 0.6s;
+}
