@@ -192,13 +192,13 @@ body{
 
 @media screen and (max-width: 1280px) {
   .front-face, .back-face{
-      border: 3px;
+      border: 3px solid #dfcb6c;
       border-radius: 5px;
     }
 }
 @media screen and (max-width: 768px) {
   .front-face, .back-face{
-      border: 2px;
+      border: 2px solid #dfcb6c;
     }
   .card{
       height: calc(25% -10px);
