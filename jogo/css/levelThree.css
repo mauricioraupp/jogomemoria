@@ -10,8 +10,8 @@
 }
 
 .front-face, .back-face{
-  width: 180px;
-  height: 230px;
+  width: clamp(70px, 9.5vw, 180px);
+  height: clamp(90px, 12vw, 230px);
 }
 
 #done-screen article{
@@ -19,21 +19,13 @@
   padding: 20px;
 }
 
-@media screen and (max-width: 1280px) {
-  .front-face, .back-face{
-      width: 120px;
-      height: 140px;
-      padding: 25px;
-    }
-}
 @media screen and (max-width: 768px) {
-  .front-face, .back-face{
-      width: 70px;
-      height: 90px;
-      padding: 10px;
-    }
   .card{
       width: 30%;
       margin: .2%;
+    }
+    .memory-game{
+      width: 80%;
+      height: 80%;
     }
 }

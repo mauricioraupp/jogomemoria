@@ -135,33 +135,3 @@ async function scoreAppear(){
 };
 
 cards.forEach(card => card.addEventListener('click', flipCard));
-
-const storedAccount = localStorage.getItem('@account_logged');
-const account = JSON.parse(storedAccount);
-let userEmail = account.email;
-
-
-
-async function requisition() {
-  let data = { unlockedLevel, userEmail };
-
-  const response = await fetch('http://localhost:3003/api/store/minigame1Update', {
-    method: "POST",
-    headers: { "Content-type": "application/json;charset=UTF-8" },
-    body: JSON.stringify(data)
-  });
-
-  let content = await response.json();
-  console.log(content)
-}
-
-const buttonBack = document.querySelector('#button-back');
-const buttonAgain = document.querySelector('#button-again');
-
-buttonBack.addEventListener('click', function() {
-  window.location.href = '../../pages/minigames.html';
-});
-
-buttonAgain.addEventListener('click', function() {
-  location.reload();
-});

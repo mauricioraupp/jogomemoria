@@ -17,17 +17,10 @@
 body{
   display: flex;
   height: 100vh;
-  background-color: #192F44;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-#back{
-  position: absolute;
-  background-image: url(../images/background.jpg);
-  background-size: cover;
-  opacity: 0.3;
-  height: 100vh;
   width: 100vw;
+  background-image: url(../../assets/indexfundo.jpg);
+  background-size: cover;
+  backdrop-filter: blur(1px) brightness(45%);
 }
 
 .memory-game{
@@ -37,7 +30,7 @@ body{
   margin: auto;
   box-sizing: content-box;
   padding: 50px 20px;
-  background-color: #17D389;
+  background-color: rgb(100, 0, 7);
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 30px 5px;
   perspective: 1000px;
@@ -64,10 +57,9 @@ body{
 
 .front-face, .back-face{
   position: absolute;
-  padding: 20px;
-  border: 5px solid #192F44;
+  border: 5px solid rgb(218, 217, 75);
   border-radius: 5px;
-  background-color: #17D389;
+  background-color: rgb(166, 7, 17);
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px 0;
 
   cursor: pointer;
@@ -148,13 +140,13 @@ svg{
 
 @media screen and (max-width: 1280px) {
   .front-face, .back-face{
-      border: 3px solid #192F44;
+      border: 3px solid rgb(218, 217, 75);
       border-radius: 5px;
     }
 }
 @media screen and (max-width: 768px) {
   .front-face, .back-face{
-      border: 2px solid #192F44;
+      border: 2px solid rgb(218, 217, 75);
     }
   .card{
       height: calc(25% -10px);
