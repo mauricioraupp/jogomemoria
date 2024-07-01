@@ -62,7 +62,7 @@ function placeName(alvo){
   notify2.textContent = `${alvo} ✔️`
   notify2.style.fontFamily = 'Inter'
   notify2.style.textAlign = 'center'
-  notify2.style.fontSize = '1.5rem'
+  notify2.style.fontSize = 'clamp(1rem, 1.5vw, 1.5rem)'
   notify2.style.fontWeight = '700'
   notify2.style.backgroundColor = 'rgb(40,40,40)'
   notify2.style.color = 'white'

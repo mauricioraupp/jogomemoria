@@ -213,4 +213,7 @@ body{
       height: 35vh;
       width: 35vh;
     }
+    #done-screen2{
+      width: 70vw;
+    }
 }
