@@ -32,21 +32,6 @@ main{
     flex-direction: column;
 }
 
-.voltar{
-    color: white;
-    margin-top: 20px;
-    font-size: 30px;
-    text-decoration: none;
-    transition: 0.4s;
-}
-
-.voltar:hover{
-    border-radius: 10px;
-    color: rgb(0, 170, 255);
-    background-color: white;
-    padding: 10px;
-}
-
 .main-text{
     color: white;
     font-size: clamp(70px, 8vw, 150px);
@@ -61,19 +46,20 @@ main{
     background-color: white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    padding-bottom: 130px;
+    padding-bottom: clamp(100px, 15vw, 150px);
     align-items: center;
 }
 
 .fotos-container{
-    width: 100%;
-    margin-top: 120px;
+    width: 80%;
+    margin-top: clamp(100px, 15vw, 150px);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-left: 15%;
-    padding-right: 15%;
     gap: 50px;
+
+    padding-bottom: clamp(100px, 15vw, 150px);
+    border-bottom: 2px solid black;
 }
 
 .foto{
@@ -81,32 +67,33 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 4px;
     
     img{
-        width: 300px;
-        height: 320px;
-        border-radius: 5px;
+        width: clamp(200px, 50vw, 280px);
+        height: clamp(215px, 53vw, 300px);
+        border-radius: 6px;
     }
 
 
 
     div{
-        width: 100%;
+        width: clamp(200px, 50vw, 280px);
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
 
         p{
-            color: rgb(0, 23, 65);
-            font-weight: 600;
-            font-size: 30px;
+            color: rgb(0, 0, 0);
+            font-weight: 700;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 2rem;
         }
 
         a{
-            width: 50px;
-            height: 50px;
+            width: clamp(2.8rem, 6vw, 3.5rem);
+            height: clamp(2.8rem, 6vw, 3.5rem);
             background-image: url(instagram.png);
             background-repeat: no-repeat;
             background-size: cover;
@@ -115,57 +102,22 @@ main{
 }
 
 .texto{
-    margin-top: 120px;
-    width: 64%;
-    font-size: clamp(1rem, 1.5vw, 1.6rem);
-    font-weight: 400;
+    margin-top: clamp(100px, 15vw, 150px);
+    width: clamp(230px, 72vw, 1300px);
+    font-size: clamp(0.9rem, 2vw, 1.6rem);
+    font-weight: 500;
     text-align: left;
+}
+
+footer{
+    width: 100%;
+    img{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 1280px){
     .fotos-container{
-        width: 100%;
-        margin-top: 120px;
-        display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        padding-left: 15%;
-        padding-right: 15%;
-        gap: 50px;
-    }
-    .foto{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        
-        img{
-            width: 300px;
-            height: 320px;
-            border-radius: 5px;
-        }
-
-        div{
-            width: 300px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-    
-            p{
-                color: rgb(0, 23, 65);
-                font-weight: 600;
-                font-size: 30px;
-            }
-    
-            a{
-                width: 50px;
-                height: 50px;
-                background-image: url(instagram.png);
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-        }
     }
 }

@@ -53,7 +53,6 @@ function checkForMatch(name){
 function disableCards(name){
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
-  console.log(name);
   scoreCounter();
   resetBoard();
   placeName(name);

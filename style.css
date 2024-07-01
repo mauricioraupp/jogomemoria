@@ -9,7 +9,7 @@
 body{
     background-image: url(assets/indexfundo.jpg);
     background-size: cover;
-    backdrop-filter: blur(1px) brightness(45%);
+    backdrop-filter: blur(3px) brightness(40%);
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -58,10 +58,10 @@ main{
     background-image: url(assets/footerimg.png);
     background-size: cover;
     position: fixed;
-    bottom: 20px;
+    bottom: 30px;
     z-index: 1;
-    width: clamp(277px, 50vw, 554px);
-    height: clamp(72.6px, 13vw, 145.2px);
+    width: clamp(277px, 70vw, 831px);
+    height: clamp(72.6px, 18.1vw, 217.8px);
 }
 #footerimg:hover{
     transform: scale(1.2);
