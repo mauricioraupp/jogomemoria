@@ -9,7 +9,7 @@ function applyStyles(mediaQuery) {
     }
 }
 
-const mediaQuery = window.matchMedia('(max-width: 1568px)');
+const mediaQuery = window.matchMedia('(max-width: 768px)');
 mediaQuery.addListener(applyStyles);
 applyStyles(mediaQuery);
 
