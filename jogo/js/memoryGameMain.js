@@ -26,6 +26,7 @@ let levelMaxPoints;
 
 function flipCard(event) {
   const alvo = event.target.name
+  const consolelog = event.target
   if (lockBoard) return;
   if (this === firstCard) return;
 
@@ -39,24 +40,24 @@ function flipCard(event) {
   }
   secondCard = this;
 
-  checkForMatch(alvo);
+  checkForMatch(alvo, consolelog);
 };
 
-function checkForMatch(alvo){
+function checkForMatch(alvo, consolelog){
   let isMatch = firstCard.dataset.animal === secondCard.dataset.animal;
-  isMatch ? disableCards(alvo) : unflipCards();
+  isMatch ? disableCards(alvo, consolelog) : unflipCards();
 };
 
-function disableCards(alvo){
+function disableCards(alvo, consolelog){
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
-  
+  console.log(consolelog)
   scoreCounter();
   resetBoard();
-  placeName(alvo)
+  placeName(alvo, consolelog)
 };
 
-function placeName(alvo){
+function placeName(alvo, consolelog){
   let notify2 = document.createElement('div');
 
   notify2.textContent = `${alvo} ✔️`
