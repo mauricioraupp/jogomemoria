@@ -11,7 +11,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  /*border: 1px solid red;*/
 }
 
 body{
@@ -20,7 +19,58 @@ body{
   width: 100vw;
   background-image: url(../../assets/indexfundo.jpg);
   background-size: cover;
-  backdrop-filter: blur(1px) brightness(45%);
+  backdrop-filter: blur(3px) brightness(40%);
+}
+
+#back{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  transition: .5s;
+  opacity: 0;
+  z-index: -1;
+}
+#done-screen2{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  height: 50vh;
+  width: 30vw;
+  border-radius: 10px;
+  background-color: #ae3135;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 20px 10px;
+
+  svg{
+    width: clamp(80px, 20vw, 200px);
+    height: clamp(80px, 20vw, 200px);
+    margin-bottom: 60px;
+  }
+}
+#done-screen2 button{
+  background-color: #dfcb6c;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  width: 90%;
+  margin-bottom: 1rem;
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ae3135;
+
+  cursor: pointer;
+}
+#done-screen2 button:hover{
+  background-color: #beae5c;
+  color: rgb(119, 5, 13);
 }
 
 .memory-game{
@@ -30,9 +80,8 @@ body{
   margin: auto;
   box-sizing: content-box;
   padding: 50px 20px;
-  background-color: rgb(100, 0, 7);
+  background-color: transparent;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.5) 0 0 30px 5px;
   perspective: 1000px;
 }
 
@@ -57,9 +106,9 @@ body{
 
 .front-face, .back-face{
   position: absolute;
-  border: 5px solid rgb(218, 217, 75);
+  border: 5px solid #dfcb6c;
   border-radius: 5px;
-  background-color: rgb(166, 7, 17);
+  background-color: #ae3135;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px 0;
 
   cursor: pointer;
@@ -93,7 +142,7 @@ body{
   height: 50vh;
   width: 30vw;
   border-radius: 10px;
-  background-color: #17D389;
+  background-color: #ae3135;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 20px 10px;
 }
 #done-screen img{
@@ -112,7 +161,7 @@ body{
 }
 
 #done-screen article button{
-  background-color: white;
+  background-color: #dfcb6c;
   padding: 10px 20px;
   border: none;
   border-radius: 50px;
@@ -121,18 +170,21 @@ body{
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  color: #192F44;
+  color: #ae3135;
 
   cursor: pointer;
 }
 #done-screen article button:hover{
-  background-color: rgb(208, 208, 208);
+  background-color: #beae5c;
+  color: rgb(119, 5, 13);
 }
 
-svg{
+#config{
   position: absolute;
   top: 7%;
   right: 5%;
+  height: clamp(20px, 5vw, 50px);
+  width: 50px;
   
   cursor: pointer;
   filter: drop-shadow(0 0 10px black) ;
@@ -140,13 +192,13 @@ svg{
 
 @media screen and (max-width: 1280px) {
   .front-face, .back-face{
-      border: 3px solid rgb(218, 217, 75);
+      border: 3px;
       border-radius: 5px;
     }
 }
 @media screen and (max-width: 768px) {
   .front-face, .back-face{
-      border: 2px solid rgb(218, 217, 75);
+      border: 2px;
     }
   .card{
       height: calc(25% -10px);
